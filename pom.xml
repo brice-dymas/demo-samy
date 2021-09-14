@@ -64,6 +64,13 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+
+<!--        Below is the single dependency we'll need to get started with JavaFaker.-->
+        <dependency>
+        <groupId>com.github.javafaker</groupId>
+        <artifactId>javafaker</artifactId>
+        <version>1.0.2</version>
+    </dependency>
     </dependencies>
 
     <build>

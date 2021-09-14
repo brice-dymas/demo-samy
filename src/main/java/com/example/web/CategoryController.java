@@ -3,6 +3,8 @@ package com.example.web;
 import com.example.model.Category;
 import com.example.services.inter.CategoryService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,6 +30,11 @@ public class CategoryController {
     @GetMapping("/list")
     public ResponseEntity<List<Category>> getAll() {
         return ResponseEntity.ok(categoryService.findAll());
+    }
+
+    @GetMapping("/pagelist")
+    public ResponseEntity<Page<Category>> getPageList(Pageable pageable) {
+        return ResponseEntity.ok(categoryService.getSinglePage(pageable));
     }
 
     @GetMapping("/{id}/details")

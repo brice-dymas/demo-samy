@@ -2,6 +2,7 @@ package com.example.repository;
 
 import com.example.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  * Projet :  demo
@@ -12,5 +13,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * Author name : Brice dymas
  * Author's mail : briceguemkam@gmail.com / brice.guemkam@iforce5.com
  */
+@Repository
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 }
